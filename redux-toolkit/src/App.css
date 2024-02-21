@@ -44,3 +44,21 @@ a {
   border: none;
   text-decoration: none;
 }
+/* Page not found */
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 85vh;
+  width: 100%;
+  color: rgb(68, 68, 68);
+}
+
+.not-found h2 {
+  font-size: 55px;
+}
+.not-found p {
+  font-size: 20px;
+}
