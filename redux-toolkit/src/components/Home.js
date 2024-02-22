@@ -1,7 +1,9 @@
 import React from "react";
-
+import { useGetProductsApiByNameQuery } from "../features/productsApi";
 const Home = () => {
-  return <div>Home</div>;
+  const { data, error, isLoading } = useGetProductsApiByNameQuery();
+
+  return <div>{console.log(data, "homePage")}</div>;
 };
 
 export default Home;

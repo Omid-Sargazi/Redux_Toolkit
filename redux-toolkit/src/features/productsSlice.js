@@ -11,11 +11,11 @@ export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async (id = null, { rejectWithValue }) => {
     try {
-      const response = await axios.get("https://fakestoreapi.com/products");
+      const response = await axios.get("https://fakestoreapi.com/productss");
       console.log(response);
       return response?.data;
     } catch (err) {
-      return rejectWithValue(err.response.data);
+      return rejectWithValue("An error occurs");
     }
   }
 );
@@ -36,6 +36,7 @@ export const productSlice = createSlice({
       })
       .addCase(productsFetch.rejected, (state, action) => {
         state.status = "rejected";
+        state.error = action.payload;
       });
   },
 });
