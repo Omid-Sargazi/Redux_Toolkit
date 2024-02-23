@@ -103,6 +103,8 @@ a {
   margin: auto;
   padding: 0.5rem;
   /* background: red; */
+  height: 60%;
+  background-size: cover;
 }
 
 .product h3 {
