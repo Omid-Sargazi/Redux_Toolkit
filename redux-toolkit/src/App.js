@@ -5,11 +5,14 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <ToastContainer />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
